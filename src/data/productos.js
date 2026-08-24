@@ -26,3 +26,4 @@ function buscarProducto(id) {
   return productoEncontrado ? productoEncontrado : `Producto con ID ${id} no encontrado.`;
 }
 console.log(buscarProducto(4)); 
+
