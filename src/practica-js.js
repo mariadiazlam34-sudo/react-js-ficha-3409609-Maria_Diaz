@@ -1,4 +1,4 @@
-//RETO 3
+
 const productos = [
     { id: 1, nombre: 'Camiseta', precio: 50000, categoria: 'Ropa', stock: 5 },
     { id: 2, nombre: 'Pantalon', precio: 90000, categoria: 'Ropa', stock: 0 },
@@ -11,6 +11,11 @@ const productos = [
     { id: 9, nombre: 'Botas', precio: 220000, categoria: 'Calzado', stock: 2 },
     { id: 10, nombre: 'Bufanda', precio: 45000, categoria: 'Accesorios', stock: 7 }
 ];
+
+// RETO 4
+productos.forEach((producto, indice) => {
+console.log(`${indice+1}.  ${producto.nombre}- ${producto.precio}- stock:${producto.stock}`);
+});
 
 
  
