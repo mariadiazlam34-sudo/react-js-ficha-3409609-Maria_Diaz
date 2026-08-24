@@ -11,20 +11,15 @@ const productos = [
     { id: 9, nombre: 'Botas', precio: 220000, categoria: 'Calzado', stock: 2 },
     { id: 10, nombre: 'Bufanda', precio: 45000, categoria: 'Accesorios', stock: 7 }
 ];
-// RETO 7
-const hayAgotados = productos.some(producto => producto.stock === 0);
-console.log("¿Hay productos agotados?", hayAgotados);
-const hayProductoMillonario = productos.some(producto => producto.precio > 1000000);
-console.log("¿Hay productos con precio mayor a $1.000.000?", hayProductoMillonario);
-const preciosValidos = productos.every(producto => producto.precio > 0);
-console.log("¿Todos tienen precio mayor que cero?", preciosValidos);
-const stockValido = productos.every(producto => producto.stock >= 0);
-console.log("¿Todos tienen stock válido?", stockValido);
-const valorInventario = productos.reduce(
-    (total, producto) => total + producto.precio * producto.stock,
-    0
-);
-console.log("Valor total del inventario:", valorInventario);
+// RETO 8
+
+const productoActualizado = {
+    ...productos[0],
+    precio: 70000,
+    stock: 10
+};
+const estado = productoActualizado.stock > 0 ? 'Disponible' : 'Agotado';
+console.log(`El producto ${productoActualizado.nombre} cuesta $${productoActualizado.precio} y está ${estado}.`);
 
 
 
