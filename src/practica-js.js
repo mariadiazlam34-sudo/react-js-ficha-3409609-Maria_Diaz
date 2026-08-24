@@ -11,14 +11,22 @@ const productos = [
     { id: 9, nombre: 'Botas', precio: 220000, categoria: 'Calzado', stock: 2 },
     { id: 10, nombre: 'Bufanda', precio: 45000, categoria: 'Accesorios', stock: 7 }
 ];
+// RETO 6
+const disponible = productos.filter(producto => producto.precio > 100000);
+const productosRango = productos.filter(producto => 
+    producto.precio >= 50000 && producto.precio <= 200000
+);
+const productosRopa = productos.filter(producto => 
+    producto.categoria === 'Ropa'
+);
+const producto5 = productos.find(producto => producto.id === 5);
 
-// RETO 5
-const precios = productos.map(producto => producto.precio * 1.19);
-console.log(precios);
-const nombresMayuscula = productos.map(producto => producto.nombre.toUpperCase());
-console.log(nombresMayuscula);
-const resumenProductos = productos.map(producto => `${producto.nombre} cuesta $${producto.precio}`);
-console.log(resumenProductos);
+const buscarProducto = id => {
+    return productos.find(producto => producto.id === id);
+};
+console.log(disponible),console.log(productosRango),console.log(productosRopa),console.log(producto5),console.log(buscarProducto(5));
+
+
 
 
 
