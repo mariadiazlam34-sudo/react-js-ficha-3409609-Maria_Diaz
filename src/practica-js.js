@@ -12,10 +12,14 @@ const productos = [
     { id: 10, nombre: 'Bufanda', precio: 45000, categoria: 'Accesorios', stock: 7 }
 ];
 
-// RETO 4
-productos.forEach((producto, indice) => {
-console.log(`${indice+1}.  ${producto.nombre}- ${producto.precio}- stock:${producto.stock}`);
-});
+// RETO 5
+const precios = productos.map(producto => producto.precio * 1.19);
+console.log(precios);
+const nombresMayuscula = productos.map(producto => producto.nombre.toUpperCase());
+console.log(nombresMayuscula);
+const resumenProductos = productos.map(producto => `${producto.nombre} cuesta $${producto.precio}`);
+console.log(resumenProductos);
+
 
 
  
