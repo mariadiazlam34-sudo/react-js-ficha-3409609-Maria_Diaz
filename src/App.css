@@ -15,3 +15,12 @@ border-radius: 10px;
 padding: 16px;
 background: white;
 }
+.etiqueta-precio {
+  display: inline-block;
+  background: #eef;
+  color: #335;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
